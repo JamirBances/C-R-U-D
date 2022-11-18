@@ -1,0 +1,195 @@
+html {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  width: 100%;
+}
+
+.App{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  width: 100%;
+  height: 98vh;
+}
+
+/* User Form */
+.users-form-app{
+  width: 90%;
+  padding: 1.5rem 0 2rem 0;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+
+.user-form-container{
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.user-form-container h1{
+  margin: 1rem 0 15px 0;
+  text-align: left;
+}
+
+.user-form-full-name, .user-form-email, .user-form-password, .user-form-birthday{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.user-form-full-name input {
+  width: 45%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+.user-form-birthday input, 
+.user-form-email input, 
+.user-form-password input{
+  width: 92.5%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+.button-upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+button{
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* User List */
+.users-list-app{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 533px;
+  overflow: auto;
+}
+
+
+.users-list{
+  width: 90%;
+  color: black;
+}
+
+.users-list-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.users-list-details{
+  padding-left: 2rem;
+}
+
+.users-list-icons{
+  display: flex;
+  flex-direction: row;
+  padding-right: 2rem;
+}
+
+
+
+.button-trash{
+  margin-right: 1.5rem;
+}
+
+.button-trash, .button-edit{
+  padding: 0.5rem 1.5rem;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (max-width: 1920px) {
+  .users-list-app{
+    padding-top: 2rem;
+    height: 99vh;
+  }
+}
+
+@media (max-width: 950px) {
+  .users-list-icons{
+    flex-direction: column;
+  }
+  .button-trash{
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .App{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+  }
+  /* .users-form-app{
+    width: 90%;
+    padding: 1.5rem 0 2rem 0;
+  } */
+  .users-list-app{
+    padding-top: 0rem;
+    height: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .users-list-icons{
+    padding-left: 1rem;
+  }
+  .button-trash, .button-edit{
+    padding: 0.5rem 0.5rem;
+  }
+}
