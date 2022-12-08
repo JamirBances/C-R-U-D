@@ -10,25 +10,25 @@ function App() {
   const [userSelected, setUserSelected] = useState(null);
 
   useEffect(() => {
-    axios.get('http://users-crud.academlo.tech/users/')
+    axios.get('https://users-crud.academlo.tech/users/')
       .then(res => setUsersList(res.data));
   }, []);
 
   console.log(usersList);
 
   const getUsers = () => {
-    axios.get('http://users-crud.academlo.tech/users/')
+    axios.get('https://users-crud.academlo.tech/users/')
       .then(res => setUsersList(res.data));
   };
 
   const addUser = (newUser) => {
-    axios.post('http://users-crud.academlo.tech/users/', newUser)
+    axios.post('https://users-crud.academlo.tech/users/', newUser)
       .then(() => getUsers())
       .catch((error) => console.log(error.response?.data));
   };
 
   const deleteUser = (id) => {
-    axios.delete(`http://users-crud.academlo.tech/users/${id}/`)
+    axios.delete(`https://users-crud.academlo.tech/users/${id}/`)
       .then(() => getUsers());
   };
 
@@ -37,7 +37,7 @@ function App() {
   };
 
   const updateUser = (editedUser) => {
-    axios.put(`http://users-crud.academlo.tech/users/${userSelected.id}/`, editedUser)
+    axios.put(`https://users-crud.academlo.tech/users/${userSelected.id}/`, editedUser)
       .then(() => getUsers())
       .catch((error) => console.log(error.response?.data));
     setUserSelected(null);
